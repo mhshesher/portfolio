@@ -4,7 +4,44 @@ const researchTable = document.querySelector(".main");
 
 const research = [
   {
+    title: "From Barriers to Bridges: Designing a Conversational Agent for Low-Resource Language Users in the Electricity Sector of an Emerging Global South City.",
+    link: "",
+    authors:
+      "Md. Mehedi Hasan, Abir Chakraborty Partha, Sarker Tanveer Ahmed Rumee, and Moinul Islam Zaber",
+    conferences:
+      "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, Association for Computing Machinery [Submitted]",
+    researchYr: 2024,
+    citebox: "popup1",
+    image: "assets/images/research-page/chi2025.png",
+    citation: {
+      vancouver:
+        "Md. Mehedi Hasan, Abir Chakraborty Partha, Sarker Tanveer Ahmed Rumee, and Moinul Islam Zaber. From Barriers to Bridges: Designing a Conversational Agent for Low- Resource Language Users in the Electricity Sector of an Emerging Global South City. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems. Association for Computing Machinery, 2024.",
+    },
+    abstract:
+      "In emerging economies like Bangladesh, electricity customers face inadequate service due to utility providers’ resource constraints. While conversational agents offer a solution, challenges such as low-resource language support persist. To understand the difficulties in providing service, we carried out a workplace ethnography in a call center and analyzed 265 call recording data using topic modeling. In addition, to understand demand-side needs we surveyed 577 electricity customers in Dhaka. The analysis suggests that the customers seek accessible service, empathy, and accurate, understandable information. We designed a Bangla-speaking conversational agent to address these demands and evaluated it in a between-subjects study (N=30). Participants who used the chatbot reported improved levels of cohesion, trust, and interaction quality. Our results demonstrate how the AI agent can be beneficial for customers and service providers, but they also point out its shortcomings when it comes to handling complicated inquiries.",
+    absbox: "absPopup1",
+  },
+  {
+    title: "An Experimental Study on Speech Emotion Recognition for Bangla Language",
+    link: "",
+    authors:
+      "Md. Mehedi Hasan, Sarker Tanveer Ahmed Rumee, and Moinul Islam Zaber",
+    conferences:
+      "5th International Conference on Informatics, Electronics and Vision (ICIEV) [Accepted and Presented]",
+    researchYr: 2023,
+    citebox: "popup1",
+    image: "assets/images/research-page/taylor and francis.png",
+    citation: {
+      vancouver:
+        "Md. Mehedi Hasan, Sarker Tanveer Ahmed Rumee, and Moinul Islam Zaber. An Experimental Study on Speech Emotion Recognition for Bangla Language. In 2023 5th International Conference on Informatics, Electronics and Vision (ICIEV). Taylor & Francis, 2023.",
+    },
+    abstract:
+      "Speech emotion recognition (SER) is one of the building blocks of speech-enabled personalized applications. However, recognition of emotion from speech is complex due to the variation of emotion intensity (arousal) of the human voice. Data is another challenge for low-resource languages e.g., Bangla. To the best of our knowledge, only two datasets are available for SER in Bangla. One of the datasets has not been evaluated using deep learning techniques yet. In this work, we have applied deep learning techniques to available Bangla SER datasets (SUBESCO and BanglaSER) and evaluated their performance. Our major objective is to assess both datasets using identical deep learning methodologies to investigate their usability, a task that has not been undertaken thus far. Convolutional neural networks have been applied to a set of 11 different features of audio data. We have performed extensive experimental study using three different approaches (without cross-validation, cross-validation, and cross-validation with regularization) on three different setups of datasets (combined SUBESCO and Bangla SER, only SUBESCO, and only BanglaSER). Without cross-validation, more than 70% accuracy has been achieved for all dataset setups. After cross-validation, 68.08% average accuracy and after regularization with cross-validation, 62.62% average accuracy have been achieved on dataset set-up 3 (only BangleSER). The results significantly demonstrate that these datasets are not prepared to develop BanglaSER. Dataset volume is a major challenge for achieving benchmark performance. Hence, the development of a large audio corpus with transcription variation is one of the significant scopes of research in Bangla speech emotion recognition.",
+    absbox: "absPopup1",
+  },
+  {
     title: "Covid-19 Dataset: Worldwide spread log including countries first case and first death",
+    link: "https://www.sciencedirect.com/science/article/pii/S2352340920310672",
     authors:
       "Hasmot Ali, Md Fahad Hossain, Md Mehedi Hasan, Sheikh Abujar",
     conferences:
@@ -23,6 +60,7 @@ const research = [
 
   {
     title: "Preprocessing of Continuous Bengali Speech for Feature Extraction",
+    link: "https://ieeexplore.ieee.org/abstract/document/9225469",
     authors:
       "Md Mehedi Hasan, Hasmot Ali, Md Fahad Hossain, Sheikh Abujar",
     conferences:
@@ -42,6 +80,7 @@ const research = [
   {
     title:
       "A Machine Learning Approach to Recognize Speakers Region of the United Kingdom from Continuous Speech Based on Accent Classification",
+    link: "https://ieeexplore.ieee.org/abstract/document/9393038",
     authors: "Md Fahad Hossain, Md Mehedi Hasan, Hasmot Ali, Md Rahmatul Kabir Rasel Sarker, Md Toukirul Hassan",
     conferences:
       "2020 11th International Conference on Electrical and Computer Engineering (ICECE)",
@@ -60,6 +99,7 @@ const research = [
   {
     title:
       "A Continuous Word Segmentation of Bengali Noisy Speech",
+    link: "https://link.springer.com/chapter/10.1007/978-981-15-7394-1_48",
     authors:
       "Md Fahad Hossain, Md Mehedi Hasan, Hasmot Ali, Sheikh Abujar",
     conferences:
@@ -78,6 +118,7 @@ const research = [
 
   {
     title: "FishNet: Fish Classification using Convolutional Neural Network",
+    link: "https://ieeexplore.ieee.org/abstract/document/9579550",
     authors: "Shumaiya Akter Shammi, Sajal Das, Mehedi Hasan, Sheak Rashed Haider Noori",
     conferences:
       "2021 12th International Conference on Computing Communication and Networking Technologies (ICCCNT)",
@@ -100,6 +141,7 @@ const fillData = () => {
     ({
       image,
       title,
+      link,
       authors,
       conferences,
       researchYr,
@@ -117,7 +159,7 @@ const fillData = () => {
                             <img src="${image}" class="imgRes">
                         </span>
                     </div>
-                    <a href="#0" class="paperTitle"> ${title} </a> 
+                    <a href="${link}" class="paperTitle"> ${title} </a> 
                     <div class = "authors"> ${authors} </div> 
                     
                     <div class="rConferences"> ${conferences} 
